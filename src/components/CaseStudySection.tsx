@@ -8,7 +8,7 @@ const blogs = [
     id: 1,
     partnerId: 'kobesteel',
     title: 'Global Steel Supply Chains: Sourcing & Logistical Resilience',
-    description: 'Exploring modern international sourcing models, trade regulations, and mitigating transport delay risks for utility and infrastructure projects.',
+    description: "Utility and infrastructure projects run on steel — see what's shaping global sourcing today, from trade regulations to logistics resilience that holds up under pressure.",
     stat: '01',
     scope: '6 Min Read',
     image: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&auto=format&fit=crop&q=80'
@@ -74,7 +74,7 @@ const CaseStudySection: React.FC = () => {
   return (
     <section className="case-study-section" id="case-study">
       <div className="cs-container">
-        
+
         {/* Header */}
         <div className="cs-header">
           <div className="cs-header-left">
@@ -99,17 +99,17 @@ const CaseStudySection: React.FC = () => {
         {/* Slider Content */}
         <div className="cs-slider-window">
           <div className="cs-slide active">
-            
+
             <div className="cs-left-block">
               <div className="cs-shadow-bg">
                 <img src="/assets/case-shadow.png" alt="Glow Shadow" />
               </div>
-              
+
               <div className="cs-left-top">
                 <h3 className="cs-card-title">{activeBlog.title}</h3>
                 <p className="cs-card-desc">{activeBlog.description}</p>
               </div>
-              
+
               <div className="cs-left-bottom">
                 <div className="cs-stats">
                   <h4 className="cs-stat-number">{activeBlog.stat}</h4>

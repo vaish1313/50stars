@@ -1,0 +1,115 @@
+.airport-3d-section-wrapper {
+  width: 100%;
+  background-color: #121212;
+  padding: 4rem 0 3rem 0;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.airport-3d-container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 0 4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.airport-3d-header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.airport-3d-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--color-white);
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.5px;
+}
+
+.airport-3d-subtitle {
+  font-size: 1rem;
+  color: #a7a3a2;
+  margin: 0;
+}
+
+.airport-3d-canvas-wrap {
+  position: relative;
+  width: 100%;
+  height: 520px;
+  background: #141414;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.airport-3d-canvas-wrap .lbl {
+  position: absolute;
+  z-index: 10;
+  pointer-events: none;
+  font-size: 13px;
+  font-weight: 600;
+  color: #EAEAEA;
+  line-height: 1.35;
+  background: rgba(20, 20, 20, 0.85);
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 87, 34, 0.3);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+}
+
+.airport-3d-canvas-wrap .lbl span {
+  font-size: 11px;
+  font-weight: 400;
+  color: #9A9A9A;
+}
+
+.lbl-truss {
+  left: 24px;
+  top: 24px;
+}
+
+.lbl-deck {
+  right: 24px;
+  top: 24px;
+  text-align: right;
+}
+
+.lbl-col {
+  left: 24px;
+  bottom: 24px;
+}
+
+.lbl-crane {
+  right: 24px;
+  bottom: 24px;
+  text-align: right;
+}
+
+@media (max-width: 768px) {
+  .airport-3d-container {
+    padding: 0 1.5rem;
+  }
+  
+  .airport-3d-title {
+    font-size: 1.8rem;
+  }
+
+  .airport-3d-canvas-wrap {
+    height: 380px;
+  }
+
+  .airport-3d-canvas-wrap .lbl {
+    font-size: 11px;
+    padding: 6px 10px;
+  }
+}

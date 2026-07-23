@@ -1,0 +1,198 @@
+.video-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 800px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 2;
+  box-shadow: 0 -20px 40px rgba(0,0,0,0.15);
+}
+
+.video-background-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.background-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 50%;
+  display: block;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 21, 21, 0.6);
+  z-index: 2;
+}
+
+.video-bg-shadow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background: linear-gradient(180deg, rgba(200, 55, 11, 0) 0%, rgb(158, 50, 17) 100%);
+  filter: blur(5px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.video-content-container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.founder-card {
+  background-color: rgba(21, 21, 21, 0.6);
+  border: 1px solid rgba(92, 92, 92, 0.5);
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  width: 220px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.founder-image-wrapper {
+  width: 100%;
+  aspect-ratio: 1.32743 / 1;
+  overflow: hidden;
+}
+
+.founder-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+.founder-info {
+  padding: 1rem 0.5rem;
+  text-align: center;
+}
+
+.founder-name {
+  color: var(--color-orange);
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin: 0 0 0.3rem 0;
+}
+
+.founder-title {
+  color: var(--color-orange);
+  font-size: 0.8rem;
+  font-weight: 500;
+  margin: 0;
+}
+
+.quote-container {
+  text-align: center;
+  max-width: 500px;
+  margin-top: 1rem;
+}
+
+.quote-text {
+  color: rgb(255, 255, 255);
+  font-size: 1.15rem;
+  line-height: 1.4;
+  font-weight: 500;
+  margin: 0;
+}
+
+.play-pause-btn {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 10;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgb(21, 21, 21);
+  border: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.play-pause-btn:hover {
+  transform: scale(1.05);
+  background-color: #333;
+}
+
+@media (max-width: 768px) {
+  .video-section {
+    height: auto;
+    min-height: 600px;
+    padding: 6rem 0;
+  }
+  .play-pause-btn {
+    bottom: 1rem;
+    right: 1rem;
+  }
+}
+
+.btn-quote-who-we-are {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.5rem;
+  background-color: var(--color-orange);
+  color: var(--color-black);
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  border-radius: 4px 4px 14px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: background-color 0.25s ease, transform 0.25s ease;
+  height: 52px;
+  width: fit-content;
+}
+
+.btn-quote-who-we-are:hover {
+  background-color: #ff7a50;
+  transform: translateY(-2px);
+}
+
+.btn-quote-who-we-are .btn-text {
+  color: var(--color-black);
+}
+
+.btn-quote-who-we-are .btn-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background-color: var(--color-black);
+  border-radius: 4px 4px 8px;
+}
+
+.btn-quote-who-we-are .btn-icon img {
+  filter: brightness(0) invert(1);
+}
+

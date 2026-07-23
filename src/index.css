@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-orange) #111111;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #111111;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-orange);
+  border-radius: 4px;
+  border: 1px solid #111111;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #f45e38;
+}
+
+.scroll-progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: var(--color-orange);
+  z-index: 9999;
+  width: 0%;
+  transition: width 0.1s ease-out;
+}
+
+:root {
+  --color-bg: #f4f4f4;
+  --color-text-main: #111111;
+  --color-text-muted: #6b6b6b;
+  --color-orange: #d34a24;
+  --color-white: #ffffff;
+  --color-black: #111111;
+  --color-border: #e6e6e6;
+  
+  --font-main: 'Inter', sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Background Grid Lines */
+.page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.page-wrapper::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 1440px;
+  height: 100%;
+  background-image: 
+    linear-gradient(to right, transparent calc(25% - 1px), var(--color-border) 25%, transparent calc(25% + 1px)),
+    linear-gradient(to right, transparent calc(50% - 1px), var(--color-border) 50%, transparent calc(50% + 1px)),
+    linear-gradient(to right, transparent calc(75% - 1px), var(--color-border) 75%, transparent calc(75% + 1px));
+  z-index: -1;
+  pointer-events: none;
+}
+
+.main-content-wrapper {
+  position: relative;
+  z-index: 2;
+  background-color: var(--color-white);
+}
+
+/* Stacking transitions for all sections */
+.hero-section {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.video-section {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  background-color: #151515;
+}
+
+.about-section {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background-color: var(--color-white);
+}
+
+.services-section {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  background-color: transparent;
+}
+
+.products-section {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background-color: #151515;
+}
+
+.industry-section {
+  position: sticky;
+  top: 0;
+  z-index: 6;
+  background-color: #f1f2f3;
+}
+
+.case-study-section {
+  position: sticky;
+  top: 0;
+  z-index: 7;
+  background-color: var(--color-white);
+}
+
+.why-choose-section {
+  position: sticky;
+  top: 0;
+  z-index: 8;
+  background-color: var(--color-white);
+}
+
+.why-gc-choose-section {
+  position: sticky;
+  top: 0;
+  z-index: 9;
+  background-color: var(--color-white);
+}
+
+.testimonial-section {
+  position: relative;
+  z-index: 10;
+  background-color: var(--color-white);
+}
+
+.footer-section {
+  position: relative;
+  z-index: 11;
+  background-color: var(--color-black);
+}
+
+/* Scroll Reveal Animations */
+.hero-content,
+.founder-card, .quote-container,
+.about-title, .about-description, .about-card,
+.services-title, .service-row, .services-cta,
+.ps-counter, .ps-subtitle, .ps-diagram-container, .ps-card,
+.is-title, .is-desc, .is-tab-btn, .is-panel,
+.cs-title, .cs-slide,
+.wc-main-title, .wc-intro-grid,
+.tm-title, .tm-card, .tm-col-2,
+.ft-col, .ft-bottom {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform, opacity;
+}
+
+.hero-content.revealed,
+.founder-card.revealed, .quote-container.revealed,
+.about-title.revealed, .about-description.revealed, .about-card.revealed,
+.services-title.revealed, .service-row.revealed, .services-cta.revealed,
+.ps-counter.revealed, .ps-subtitle.revealed, .ps-diagram-container.revealed, .ps-card.revealed,
+.is-title.revealed, .is-desc.revealed, .is-tab-btn.revealed, .is-panel.revealed,
+.cs-title.revealed, .cs-slide.revealed,
+.wc-main-title.revealed, .wc-intro-grid.revealed,
+.tm-title.revealed, .tm-card.revealed, .tm-col-2.revealed,
+.ft-col.revealed, .ft-bottom.revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+  /* Scale down container paddings globally */
+  .about-container,
+  .services-container,
+  .ps-container,
+  .industry-container,
+  .cs-container,
+  .tm-container,
+  .ft-container,
+  .navbar-container,
+  .hero-container {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+  }
+
+  /* Scale down all big headings */
+  .hero-title {
+    font-size: 2.5rem !important;
+    letter-spacing: -1px !important;
+  }
+  
+  .about-title,
+  .services-title,
+  .industry-title,
+  .cs-title,
+  .tm-title {
+    font-size: 2.2rem !important;
+    letter-spacing: -1px !important;
+    line-height: 1.15 !important;
+  }
+
+  .ps-counter {
+    font-size: 2.8rem !important;
+  }
+
+  /* Fix for nobr whitespaces keeping elements from wrapping on mobile */
+  .nobr {
+    white-space: normal !important;
+  }
+}
+
+/* Scroll to top button */
+.btn-scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--color-orange);
+  color: var(--color-white);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  z-index: 999;
+  transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-scroll-to-top:hover {
+  transform: translateY(-4px);
+  background-color: #c2401d;
+}
+
+@media (max-width: 768px) {
+  .btn-scroll-to-top {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 44px;
+    height: 44px;
+  }
+}

@@ -1,0 +1,287 @@
+.why-gc-choose-section {
+  width: 100%;
+  background-color: var(--color-white);
+  padding: 2.5rem 0 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid var(--color-border);
+}
+
+.wgc-container {
+  max-width: 1440px;
+  width: 100%;
+  padding: 2rem 4rem;
+}
+
+/* Sourcing Section Pill Badge */
+.pill-who-we-are {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 100px;
+  background-color: var(--color-white);
+  border: 1px solid var(--color-border);
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.02);
+}
+
+.pill-gradient-square {
+  width: 10px;
+  height: 10px;
+  background: linear-gradient(46deg, rgb(200, 55, 11) 0%, rgb(246, 98, 52) 100%);
+  border-radius: 2px;
+}
+
+.pill-text {
+  font-weight: 600;
+  font-size: 0.75rem;
+  color: var(--color-black);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Benefits Section Layout */
+.wgc-benefits-block {
+  width: 100%;
+}
+
+.wgc-section-subtitle {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--color-black);
+  letter-spacing: -0.8px;
+  margin-bottom: 2rem;
+  text-align: left;
+}
+
+.wgc-benefits-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1.3fr;
+  gap: 2rem;
+}
+
+.wgc-benefits-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.wgc-benefit-card {
+  position: relative;
+  background-color: #fafafa;
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.wgc-benefit-card:hover {
+  background-color: var(--color-white);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+  border-color: rgba(211, 74, 36, 0.3);
+}
+
+.wgc-card-num-bg {
+  position: absolute;
+  right: 1.5rem;
+  top: 0.5rem;
+  font-size: 6.5rem;
+  font-weight: 800;
+  color: var(--color-orange);
+  opacity: 0.035;
+  pointer-events: none;
+  line-height: 1;
+}
+
+.wgc-benefit-card:hover .wgc-card-num-bg {
+  opacity: 0.06;
+}
+
+.wgc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.25rem;
+}
+
+.wgc-benefit-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: linear-gradient(46deg, rgb(200, 55, 11) 0%, rgb(246, 98, 52) 100%);
+  color: var(--color-white);
+  font-weight: 700;
+  font-size: 0.85rem;
+}
+
+.wgc-benefit-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-black);
+  letter-spacing: -0.3px;
+}
+
+.wgc-benefit-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-muted);
+}
+
+/* Card 3 - Pricing Table Card */
+.wgc-card-pricing-table {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.wgc-card-header-horizontal {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.wgc-card-header-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.wgc-benefit-desc-top {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+.wgc-table-wrapper {
+  margin: 1.5rem 0;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: var(--color-white);
+}
+
+.wgc-pricing-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wgc-pricing-table th, 
+.wgc-pricing-table td {
+  padding: 1.1rem 1.5rem;
+  text-align: left;
+}
+
+.wgc-pricing-table th {
+  background-color: #fafafa;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--color-text-muted);
+}
+
+.wgc-pricing-table td {
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.95rem;
+  color: var(--color-black);
+  font-weight: 500;
+}
+
+.wgc-pricing-table tr:last-child td {
+  border-bottom: none;
+}
+
+.wgc-pricing-table tbody tr {
+  transition: background-color 0.2s ease;
+}
+
+.wgc-pricing-table tbody tr:hover {
+  background-color: rgba(211, 74, 36, 0.03);
+}
+
+.wgc-fee-val {
+  font-weight: 700;
+  color: var(--color-orange);
+  font-size: 1.25rem;
+}
+
+.wgc-fee-unit {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.wgc-table-caption {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+  border-top: 1px solid var(--color-border);
+  padding-top: 1.25rem;
+  margin-top: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .wgc-container {
+    padding: 3rem 2rem;
+  }
+  .wgc-benefits-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .wgc-container {
+    padding: 2.5rem 1.5rem;
+  }
+  .wgc-section-subtitle {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+  }
+  .wgc-benefit-card {
+    padding: 2rem 1.5rem;
+  }
+  .wgc-pricing-table th, 
+  .wgc-pricing-table td {
+    padding: 0.9rem 1.1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .wgc-container {
+    padding: 2rem 1rem;
+  }
+  .wgc-benefit-card {
+    padding: 1.5rem 1rem;
+  }
+  .wgc-pricing-table th, 
+  .wgc-pricing-table td {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
+  }
+  .wgc-fee-val {
+    font-size: 1.1rem;
+  }
+  .wgc-fee-unit {
+    font-size: 0.75rem;
+  }
+  .wgc-card-num-bg {
+    font-size: 4rem;
+    right: 0.75rem;
+    top: 0.5rem;
+  }
+  .wgc-benefit-title {
+    font-size: 1.1rem;
+  }
+}
